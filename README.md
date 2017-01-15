@@ -1,2 +1,2 @@
 This Repository is collection of Examples,Concepts,Program and Project Related to Natural Language Processing ,Text Ming,Data Mining
-Using Python,NLTK,Tenserflow and other Pyhon librarys.
+Using Python,Pandas,sci-kit learn ,seaborn,numpy/scipy,requests,beautifulSoup,NLTK,Tenserflow and other Pyhon librarys.
