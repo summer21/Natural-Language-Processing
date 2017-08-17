@@ -14,6 +14,7 @@
 # Importing Libraries
 
 import nltk
+from nltk.corpus import inaugural
 
 # Text Count
 
@@ -43,6 +44,24 @@ print(len(md)/len(md_sents))
 
 
 
-# Example per
+# Example words per sentance trends
+
+print(inaugural.fileids())
+
+for speech in inaugural.fileids():
+    total_word = len(inaugural.words(speech))
+    print(str(total_word) + " Title: " + speech)
+
+# if you find that output as list. I generally used list comprehension
+
+speech_len = [ (len(inaugural.words()), speech) for speech in inaugural.fileids()]
+print(speech_len)
+print(max(speech_len))
+print(min(speech_len))
+
+# Find out the average no of words per sentence
+
+for
+
 
 
