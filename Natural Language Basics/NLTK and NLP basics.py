@@ -15,6 +15,9 @@
 
 import nltk
 from nltk.corpus import inaugural
+import pandas as pd
+import matplotlib.pyplot as plt
+
 
 # Text Count
 
@@ -61,7 +64,21 @@ print(min(speech_len))
 
 # Find out the average no of words per sentence
 
-for
+for speech in inaugural.fileids():
+    words_total = len(inaugural.words(speech))
+    sents_total = len(inaugural.sents(speech))
+    avg_word_per_sents = words_total/sents_total
+    print(avg_word_per_sents, speech)
 
+# Best way to show this information as plot or visualize .
+# Making the data frame using the python
+
+data = pd.DataFrame([int(speech[:4]), len(inaugural.words(speech)) / len( inaugural.sents(speech))] for speech in inaugural.fileids())
+data.columns = ["Year","Average WPS"]
+print(data.head(10))
+
+plt.interactive(False)
+data.plot("Year", figsize= (15,5))
+plt.show()
 
 
